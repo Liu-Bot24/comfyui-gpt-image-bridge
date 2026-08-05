@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-gpt-image-bridge"
+version = "0.5.2"
+description = "Multi-provider GPT image generation and editing bridge for ComfyUI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ComfyUI GPT Image Bridge contributors" }]
+dependencies = [
+  "numpy>=1.24",
+  "Pillow>=10.0",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/Liu-Bot24/comfyui-gpt-image-bridge"
+Documentation = "https://github.com/Liu-Bot24/comfyui-gpt-image-bridge#readme"
+
+[tool.comfy]
+PublisherId = "lq36821"
+DisplayName = "GPT Image Bridge"
+
+[tool.setuptools]
+include-package-data = false
+packages = ["gpt_image_bridge"]
+py-modules = ["nodes"]
+
+[tool.setuptools.package-data]
+gpt_image_bridge = ["web/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

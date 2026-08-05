@@ -1,0 +1,16 @@
+tests/
+tools/
+.pytest_cache/
+.ruff_cache/
+test-output/
+artifacts/
+reference/
+recovery/
+workflows/
+DEVELOPMENT_LOG.md
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+*.log

@@ -1,0 +1,1044 @@
+{
+  "id": "635d2a66-008f-5317-a0aa-757525ff9901",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 10,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        260,
+        230
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "link": null,
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Image 1｜基础图（待编辑）",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "gpt-image-bridge-example-base.png",
+        "image"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        250
+      ],
+      "size": [
+        260,
+        230
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "link": null,
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Image 2｜参考图 1（队列第 1 张）",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "gpt-image-bridge-example-reference-1.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        500
+      ],
+      "size": [
+        260,
+        230
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "link": null,
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Image 3｜参考图 2（队列第 2 张）",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "gpt-image-bridge-example-reference-2.png",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "GPTImageBridgeReferenceList",
+      "pos": [
+        300,
+        240
+      ],
+      "size": [
+        320,
+        300
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image_2（Image 2）",
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "label": "image_3（Image 3）",
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "label": "image_4（Image 4）",
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_5（Image 5）",
+          "name": "image_5",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_6（Image 6）",
+          "name": "image_6",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_7（Image 7）",
+          "name": "image_7",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_8（Image 8）",
+          "name": "image_8",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_9（Image 9）",
+          "name": "image_9",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "references",
+          "name": "references",
+          "type": "GPT_IMAGE_REFERENCES",
+          "links": [
+            5,
+            6
+          ]
+        }
+      ],
+      "title": "参考图队列（从 Image 2 开始）",
+      "properties": {
+        "Node name for S&R": "GPTImageBridgeReferenceList",
+        "cnr_id": "comfyui-gpt-image-bridge",
+        "ver": "0.5.1"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 5,
+      "type": "GPTImageBridgeOAuthProvider",
+      "pos": [
+        660,
+        0
+      ],
+      "size": [
+        370,
+        190
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "api_protocol",
+          "name": "api_protocol",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "api_protocol"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "provider",
+          "name": "provider",
+          "type": "GPT_IMAGE_PROVIDER",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "OAuth Provider（默认启用；自动读取登录）",
+      "properties": {
+        "Node name for S&R": "GPTImageBridgeOAuthProvider",
+        "cnr_id": "comfyui-gpt-image-bridge",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "gpt-image-2",
+        "auto"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "GPTImageBridgeEdit",
+      "pos": [
+        1060,
+        0
+      ],
+      "size": [
+        470,
+        650
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "provider",
+          "name": "provider",
+          "type": "GPT_IMAGE_PROVIDER",
+          "link": 7
+        },
+        {
+          "label": "base_image（Image 1）",
+          "name": "base_image（Image 1）",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "label": "size",
+          "name": "size",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "size"
+          }
+        },
+        {
+          "label": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "quality"
+          }
+        },
+        {
+          "label": "background",
+          "name": "background",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "background"
+          }
+        },
+        {
+          "label": "output_format",
+          "name": "output_format",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "output_format"
+          }
+        },
+        {
+          "label": "moderation",
+          "name": "moderation",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "moderation"
+          }
+        },
+        {
+          "label": "n",
+          "name": "n",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "n"
+          }
+        },
+        {
+          "label": "timeout_sec",
+          "name": "timeout_sec",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "timeout_sec"
+          }
+        },
+        {
+          "label": "references（Image 2 开始）",
+          "name": "references（Image 2 开始）",
+          "type": "GPT_IMAGE_REFERENCES",
+          "link": 5
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        },
+        {
+          "label": "revised_prompt",
+          "name": "revised_prompt",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "request_report",
+          "name": "request_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "OAuth 图片编辑（默认启用）",
+      "properties": {
+        "Node name for S&R": "GPTImageBridgeEdit",
+        "cnr_id": "comfyui-gpt-image-bridge",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "Edit Image 1 as the base image and preserve its composition and primary subject. Use Image 2 and then Image 3 as ordered visual references. Incorporate one distinctive detail from each reference, but do not return either reference unchanged.",
+        "auto",
+        "medium",
+        "auto",
+        "png",
+        "auto",
+        1,
+        300
+      ]
+    },
+    {
+      "id": 7,
+      "type": "SaveImage",
+      "pos": [
+        1560,
+        0
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "OAuth 保存结果（默认启用）",
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "gpt-image-bridge-examples/oauth-edit"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "GPTImageBridgeAPIProvider",
+      "pos": [
+        660,
+        720
+      ],
+      "size": [
+        370,
+        430
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 2,
+      "inputs": [
+        {
+          "label": "api_key",
+          "name": "api_key",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "api_key"
+          }
+        },
+        {
+          "label": "base_url",
+          "name": "base_url",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "base_url"
+          }
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "api_protocol",
+          "name": "api_protocol",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "api_protocol"
+          }
+        },
+        {
+          "label": "使用自定义端点",
+          "name": "use_custom_endpoints",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "use_custom_endpoints"
+          }
+        },
+        {
+          "label": "自定义生成端点",
+          "name": "generate_endpoint",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "generate_endpoint"
+          }
+        },
+        {
+          "label": "自定义编辑端点",
+          "name": "edit_endpoint",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "edit_endpoint"
+          }
+        },
+        {
+          "label": "使用异步",
+          "name": "use_async",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "use_async"
+          }
+        },
+        {
+          "label": "自定义异步生成提交端点",
+          "name": "async_generate_endpoint",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "async_generate_endpoint"
+          }
+        },
+        {
+          "label": "自定义异步编辑提交端点",
+          "name": "async_edit_endpoint",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "async_edit_endpoint"
+          }
+        },
+        {
+          "label": "自定义异步查询端点模板",
+          "name": "async_poll_endpoint_template",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "async_poll_endpoint_template"
+          }
+        },
+        {
+          "label": "自定义异步 JSON 映射",
+          "name": "async_mapping_json",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "async_mapping_json"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "provider",
+          "name": "provider",
+          "type": "GPT_IMAGE_PROVIDER",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "API Provider（默认禁用；异步默认开启）",
+      "properties": {
+        "Node name for S&R": "GPTImageBridgeAPIProvider",
+        "cnr_id": "comfyui-gpt-image-bridge",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "auto",
+        false,
+        "",
+        "",
+        true,
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 9,
+      "type": "GPTImageBridgeEdit",
+      "pos": [
+        1060,
+        720
+      ],
+      "size": [
+        470,
+        650
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 2,
+      "inputs": [
+        {
+          "label": "provider",
+          "name": "provider",
+          "type": "GPT_IMAGE_PROVIDER",
+          "link": 9
+        },
+        {
+          "label": "base_image（Image 1）",
+          "name": "base_image（Image 1）",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "label": "size",
+          "name": "size",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "size"
+          }
+        },
+        {
+          "label": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "quality"
+          }
+        },
+        {
+          "label": "background",
+          "name": "background",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "background"
+          }
+        },
+        {
+          "label": "output_format",
+          "name": "output_format",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "output_format"
+          }
+        },
+        {
+          "label": "moderation",
+          "name": "moderation",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "moderation"
+          }
+        },
+        {
+          "label": "n",
+          "name": "n",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "n"
+          }
+        },
+        {
+          "label": "timeout_sec",
+          "name": "timeout_sec",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "timeout_sec"
+          }
+        },
+        {
+          "label": "references（Image 2 开始）",
+          "name": "references（Image 2 开始）",
+          "type": "GPT_IMAGE_REFERENCES",
+          "link": 6
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "label": "revised_prompt",
+          "name": "revised_prompt",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "request_report",
+          "name": "request_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "API 图片编辑（默认禁用）",
+      "properties": {
+        "Node name for S&R": "GPTImageBridgeEdit",
+        "cnr_id": "comfyui-gpt-image-bridge",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "Edit Image 1 as the base image and preserve its composition and primary subject. Use Image 2 and then Image 3 as ordered visual references. Incorporate one distinctive detail from each reference, but do not return either reference unchanged.",
+        "auto",
+        "medium",
+        "auto",
+        "png",
+        "auto",
+        1,
+        300
+      ]
+    },
+    {
+      "id": 10,
+      "type": "SaveImage",
+      "pos": [
+        1560,
+        720
+      ],
+      "size": [
+        320,
+        180
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 2,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "API 保存结果（默认禁用）",
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "gpt-image-bridge-examples/api-edit"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "MarkdownNote",
+      "pos": [
+        660,
+        1170
+      ],
+      "size": [
+        370,
+        150
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "分享工作流前检查 API 配置",
+      "properties": {},
+      "widgets_values": [
+        "**本地正式工作流会正常保存 API 配置。**\n\n分享工作流前，请手动清空 API Provider 中的 **API Key**；如果 Base URL、模型名称、自定义端点或异步 JSON 映射属于私有配置，也请一并清空。关闭“使用自定义端点”不会删除已经保存的端点文本。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      0,
+      9,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      3,
+      0,
+      4,
+      1,
+      "IMAGE"
+    ],
+    [
+      5,
+      4,
+      0,
+      6,
+      10,
+      "GPT_IMAGE_REFERENCES"
+    ],
+    [
+      6,
+      4,
+      0,
+      9,
+      10,
+      "GPT_IMAGE_REFERENCES"
+    ],
+    [
+      7,
+      5,
+      0,
+      6,
+      0,
+      "GPT_IMAGE_PROVIDER"
+    ],
+    [
+      8,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "GPT_IMAGE_PROVIDER"
+    ],
+    [
+      10,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "共享输入：Image 1 基础图 + Image 2/3 参考图",
+      "bounding": [
+        -30,
+        -40,
+        670,
+        820
+      ],
+      "color": "#315f78",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "OAuth 分支（默认启用）",
+      "bounding": [
+        630,
+        -40,
+        1280,
+        710
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "API 分支（默认禁用；填写必要配置后启用）",
+      "bounding": [
+        630,
+        680,
+        1280,
+        710
+      ],
+      "color": "#8a6d3b",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.52,
+      "offset": [
+        50,
+        35
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.45.21",
+    "gpt_image_bridge_example": "oauth_and_api_edit_with_two_references",
+    "gpt_image_bridge_default_branch": "oauth"
+  },
+  "version": 0.4
+}
